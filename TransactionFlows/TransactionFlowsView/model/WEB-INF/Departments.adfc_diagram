@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">__Departments1</property>
+      <property
+         name="page">/com/samples/transactionflows/jsff/Departments.jsff</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>__Departments1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">159.39648</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">275.45215</property>
+   </View>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">Execute</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Execute&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">142.44824</property>
+      <property
+         name="x">90.5</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall3"
+      to="View2">
+      <property
+         name="fromOutcome">Execute</property>
+      <property
+         name="sdm:polyPoints">R50,131.5,142.09766,234.45215,159.0459,L50</property>
+   </ControlFlowCase>
+</SDM>

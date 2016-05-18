@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View3">
+      <property
+         name="activityId">EmployeesChildWSharedDC</property>
+      <property
+         name="page">/com/samples/transactionflows/jsff/EmployeesChildWSharedDC.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>EmployeesChildWSharedDC&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">161.09766</property>
+      <property
+         name="x">168.03027</property>
+      <property
+         name="pageFragment">true</property>
+   </View>
+   <TaskFlowReturn
+      id="TaskFlowReturn4">
+      <property
+         name="activityId">Return</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  Return&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">209.94824</property>
+      <property
+         name="x">425.0</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="TaskFlowReturn4">
+      <property
+         name="fromOutcome">Return</property>
+      <property
+         name="sdm:polyPoints">R50,209.03027,160.74707,384.0,209.59766,L50</property>
+   </ControlFlowCase>
+</SDM>

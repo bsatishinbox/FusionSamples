@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.samples.transactionflows" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/com/samples/transactionflows/jsff/Employees.jsff"
+          usageId="com_samples_transactionflows_EmployeesPageDef"/>
+    <page path="/com/samples/transactionflows/jsff/EmployeesChildWSharedDC.jsff"
+          usageId="com_samples_transactionflows_EmployeesChildPageDef"/>
+    <page path="/com/samples/transactionflows/jspx/TransactionFlow.jspx"
+          usageId="com_samples_transactionflows_TransactionFlowPageDef"/>
+    <page path="/com/samples/transactionflows/jsff/EmployeesChildWIsolatedDC.jsff"
+          usageId="com_samples_transactionflows_EmployeesChildWIsolatedDCPageDef"/>
+    <page path="/WEB-INF/ParentTaskflow.xml#ParentTaskflow@Commit"
+          usageId="com_samples_transactionflows_ParentTaskflow_ParentTaskflow_CommitPageDef"/>
+    <page path="/WEB-INF/Departments.xml#Departments@Execute"
+          usageId="com_samples_transactionflows_Departments_Departments_ExecutePageDef"/>
+    <page path="/com/samples/transactionflows/jsff/Departments.jsff"
+          usageId="com_samples_transactionflows_DepartmentsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_samples_transactionflows_EmployeesPageDef" path="com.samples.transactionflows.jsff.EmployeesPageDef"/>
+    <page id="com_samples_transactionflows_EmployeesChildPageDef"
+          path="com.samples.transactionflows.jsff.EmployeesChildPageDef"/>
+    <page id="com_samples_transactionflows_TransactionFlowPageDef"
+          path="com.samples.transactionflows.jspx.TransactionFlowPageDef"/>
+    <page id="com_samples_transactionflows_EmployeesChildWIsolatedDCPageDef"
+          path="com.samples.transactionflows.jsff.EmployeesChildWIsolatedDCPageDef"/>
+    <page id="com_samples_transactionflows_ParentTaskflow_ParentTaskflow_CommitPageDef"
+          path="com.samples.transactionflows.pageDefs.ParentTaskflow_ParentTaskflow_CommitPageDef"/>
+    <page id="com_samples_transactionflows_Departments_Departments_ExecutePageDef"
+          path="com.samples.transactionflows.pageDefs.Departments_Departments_ExecutePageDef"/>
+    <page id="com_samples_transactionflows_DepartmentsPageDef"
+          path="com.samples.transactionflows.jsff.DepartmentsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="TransactionFlowAppModuleDataControl" Package="com.samples.transactionflows.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="TransactionFlowAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="TransactionFlow2AppModuleDataControl" Package="com.samples.transactionflows.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="TransactionFlow2AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

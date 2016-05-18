@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ChildTaskflow">
+    <default-activity>EmployeesChildWSharedDC</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="EmployeesChildWSharedDC">
+      <page>/com/samples/transactionflows/jsff/EmployeesChildWSharedDC.jsff</page>
+    </view>
+    <task-flow-return id="Return">
+      <outcome>
+        <name>Return</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>EmployeesChildWSharedDC</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>Return</from-outcome>
+        <to-activity-id>Return</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

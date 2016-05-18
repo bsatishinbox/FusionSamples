@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="TransactionFlowPageDef"
+                Package="com.samples.transactionflows.jspx">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="ParentTaskflow1" taskFlowId="/WEB-INF/ParentTaskflow.xml#ParentTaskflow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="dumpAppModuleStats" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="dumpAppModuleStats" IsViewObjectMethod="false"
+                  DataControl="TransactionFlowAppModuleDataControl"
+                  InstanceName="data.TransactionFlowAppModuleDataControl.dataProvider"/>
+    <methodAction id="dumpAppModuleStatistics" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="dumpAppModuleStatistics" IsViewObjectMethod="false"
+                  DataControl="TransactionFlowAppModuleDataControl"
+                  InstanceName="data.TransactionFlowAppModuleDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

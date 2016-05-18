@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionFlow2AppModule"
+  Version="11.1.2.64.36"
+  ComponentClass="com.samples.transactionflows.appmodule.TransactionFlow2AppModuleImpl"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.samples.transactionflows.appmodule.TransactionFlow2AppModule_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="com.samples.transactionflows.views.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="com.samples.transactionflows.views.DepartmentsView"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.samples.transactionflows.TransactionFlowsModelBundle"/>
+  </ResourceBundle>
+</AppModule>

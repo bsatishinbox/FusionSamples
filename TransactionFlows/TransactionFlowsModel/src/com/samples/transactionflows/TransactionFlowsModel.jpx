@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionFlowsModel"
+  Version="11.1.2.64.36"
+  SeparateXMLFiles="true"
+  PackageName="com.samples.transactionflows">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../TransactionFlowsModel.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="HR"/>
+    <Attr Name="_appModuleNames0" Value="com.samples.transactionflows.appmodule.TransactionFlowAppModule"/>
+    <Attr Name="_appModuleNames1" Value="com.samples.transactionflows.appmodule.TransactionFlow2AppModule"/>
+  </DesignTime>
+  <Containee
+    Name="appmodule"
+    PackageName="com.samples.transactionflows.appmodule"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="entities"
+    PackageName="com.samples.transactionflows.entities"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="views"
+    PackageName="com.samples.transactionflows.views"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>
