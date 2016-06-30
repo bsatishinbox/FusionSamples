@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="ScrollToFetchLoad">
+    <page>/com/samples/scrolltofetch/view/jspx/ScrollToFetchLoad.jspx</page>
+  </view>
+  <managed-bean id="__1">
+    <managed-bean-name>scrollToFetchBean</managed-bean-name>
+    <managed-bean-class>com.samples.scrolltofetch.beans.ScrollToFetch</managed-bean-class>
+    <managed-bean-scope>pageFlow</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>scrollToFetchBindingsBean</managed-bean-name>
+    <managed-bean-class>com.samples.scrolltofetch.beans.ScrollToFetchBindingsBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>scrollToFetchMap</managed-bean-name>
+    <managed-bean-class>java.util.HashMap</managed-bean-class>
+    <managed-bean-scope>pageFlow</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

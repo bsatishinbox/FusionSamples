@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+           <af:outputText id="ot1" value="Taskflow 2" inlineStyle="font-size:xx-large;"/>
+  <af:tree value="#{bindings.DepartmentsView1.treeModel}" var="node"
+           selectionListener="#{bindings.DepartmentsView1.treeModel.makeCurrent}" rowSelection="single" id="t1">
+    <f:facet name="nodeStamp">
+      <af:outputText value="#{node}" id="owt1"/>
+    </f:facet>
+  </af:tree>
+</jsp:root>

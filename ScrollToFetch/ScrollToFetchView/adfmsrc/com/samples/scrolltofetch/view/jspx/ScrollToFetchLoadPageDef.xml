@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="ScrollToFetchLoadPageDef"
+                Package="com.samples.scrolltofetch.view.jspx">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="TaskFlow11" taskFlowId="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow1.xml#TaskFlow1" xmlns="http://xmlns.oracle.com/adf/controller/binding"
+              Refresh="ifNeeded">
+      <parameters>
+       
+        <parameter id="LazyLoadTF" value="true"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="TaskFlow21" taskFlowId="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow2.xml#TaskFlow2" xmlns="http://xmlns.oracle.com/adf/controller/binding"
+              Refresh="ifNeeded">
+      <parameters>
+       
+        <parameter id="LazyLoadTF" value="true"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="TaskFlow31" taskFlowId="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow3.xml#TaskFlow3" xmlns="http://xmlns.oracle.com/adf/controller/binding"
+              Refresh="ifNeeded">
+      <parameters>
+      
+        <parameter id="LazyLoadTF"
+                   value="#{pageFlowScope.scrollToFetchBean.lazyLoadMap['r3']  == null ? false : pageFlowScope.scrollToFetchBean.lazyLoadMap['r3']  }"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="TaskFlow41" taskFlowId="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow4.xml#TaskFlow4" xmlns="http://xmlns.oracle.com/adf/controller/binding" Refresh="ifNeeded">
+      <parameters>
+        <parameter id="LazyLoadTF"
+                   value="#{pageFlowScope.scrollToFetchBean.lazyLoadMap['r4'] == null ? false :  pageFlowScope.scrollToFetchBean.lazyLoadMap['r4']}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>

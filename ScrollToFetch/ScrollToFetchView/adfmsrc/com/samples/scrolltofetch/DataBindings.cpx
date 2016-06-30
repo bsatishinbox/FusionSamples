@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.samples.scrolltofetch" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/com/samples/scrolltofetch/view/jsff/Employees.jsff"
+          usageId="com_samples_scrolltofetch_EmployeesPageDef"/>
+    <page path="/com/samples/scrolltofetch/view/jsff/Departments.jsff"
+          usageId="com_samples_scrolltofetch_DepartmentsPageDef"/>
+    <page path="/com/samples/scrolltofetch/view/jsff/Countries.jsff"
+          usageId="com_samples_scrolltofetch_CountriesPageDef"/>
+    <page path="/com/samples/scrolltofetch/view/jsff/Locations.jsff"
+          usageId="com_samples_scrolltofetch_LocationsPageDef"/>
+    <page path="/com/samples/scrolltofetch/view/jspx/ScrollToFetchLoad.jspx"
+          usageId="com_samples_scrolltofetch_ScrollToFetchLoadPageDef"/>
+    <page path="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow1.xml#TaskFlow1@Execute"
+          usageId="com_samples_scrolltofetch_TaskFlow1_TaskFlow1_ExecutePageDef"/>
+    <page path="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow2.xml#TaskFlow2@Execute"
+          usageId="com_samples_scrolltofetch_TaskFlow2_TaskFlow2_ExecutePageDef"/>
+    <page path="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow3.xml#TaskFlow3@Execute"
+          usageId="com_samples_scrolltofetch_TaskFlow3_TaskFlow3_ExecutePageDef"/>
+    <page path="/WEB-INF/com/samples/scrolltofetch/taskflows/TaskFlow4.xml#TaskFlow4@Execute"
+          usageId="com_samples_scrolltofetch_TaskFlow4_TaskFlow4_ExecutePageDef"/>
+    <page path="/com/samples/scrolltofetch/view/jspx/TransactionsTest.jspx"
+          usageId="com_samples_scrolltofetch_TransactionsTestPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_samples_scrolltofetch_EmployeesPageDef" path="com.samples.scrolltofetch.view.jsff.EmployeesPageDef"/>
+    <page id="com_samples_scrolltofetch_DepartmentsPageDef"
+          path="com.samples.scrolltofetch.view.jsff.DepartmentsPageDef"/>
+    <page id="com_samples_scrolltofetch_CountriesPageDef" path="com.samples.scrolltofetch.view.jsff.CountriesPageDef"/>
+    <page id="com_samples_scrolltofetch_LocationsPageDef" path="com.samples.scrolltofetch.view.jsff.LocationsPageDef"/>
+    <page id="com_samples_scrolltofetch_ScrollToFetchLoadPageDef"
+          path="com.samples.scrolltofetch.view.jspx.ScrollToFetchLoadPageDef"/>
+    <page id="com_samples_scrolltofetch_TaskFlow1_TaskFlow1_ExecutePageDef"
+          path="com.samples.scrolltofetch.taskflows.TaskFlow1_TaskFlow1_ExecutePageDef"/>
+    <page id="com_samples_scrolltofetch_TaskFlow2_TaskFlow2_ExecutePageDef"
+          path="com.samples.scrolltofetch.taskflows.TaskFlow2_TaskFlow2_ExecutePageDef"/>
+    <page id="com_samples_scrolltofetch_TaskFlow3_TaskFlow3_ExecutePageDef"
+          path="com.samples.scrolltofetch.taskflows.TaskFlow3_TaskFlow3_ExecutePageDef"/>
+    <page id="com_samples_scrolltofetch_TaskFlow4_TaskFlow4_ExecutePageDef"
+          path="com.samples.scrolltofetch.taskflows.TaskFlow4_TaskFlow4_ExecutePageDef"/>
+    <page id="com_samples_scrolltofetch_TransactionsTestPageDef"
+          path="com.samples.scrolltofetch.view.jspx.TransactionsTestPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="ScrollToAppModuleDataControl" Package="com.samples.scrolltofetch.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="ScrollToAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

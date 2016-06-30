@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+         <af:outputText id="ot1" value="Taskflow 4" inlineStyle="font-size:xx-large;"/>
+  <af:table value="#{bindings.LocationsView11.collectionModel}" var="row" rows="#{bindings.LocationsView11.rangeSize}"
+            emptyText="#{bindings.LocationsView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+            fetchSize="#{bindings.LocationsView11.rangeSize}" rowBandingInterval="0"
+            selectedRowKeys="#{bindings.LocationsView11.collectionModel.selectedRow}"
+            selectionListener="#{bindings.LocationsView11.collectionModel.makeCurrent}" rowSelection="single" id="t1">
+    <af:column sortProperty="#{bindings.LocationsView11.hints.LocationId.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.LocationId.label}" id="c1">
+      <af:outputText value="#{row.LocationId}" shortDesc="#{bindings.LocationsView11.hints.LocationId.tooltip}"
+                     id="ot1">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationsView11.hints.LocationId.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.LocationsView11.hints.StreetAddress.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.StreetAddress.label}" id="c2">
+      <af:outputText value="#{row.StreetAddress}" shortDesc="#{bindings.LocationsView11.hints.StreetAddress.tooltip}"
+                     id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.LocationsView11.hints.PostalCode.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.PostalCode.label}" id="c3">
+      <af:outputText value="#{row.PostalCode}" shortDesc="#{bindings.LocationsView11.hints.PostalCode.tooltip}"
+                     id="ot3"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.LocationsView11.hints.City.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.City.label}" id="c4">
+      <af:outputText value="#{row.City}" shortDesc="#{bindings.LocationsView11.hints.City.tooltip}" id="ot4"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.LocationsView11.hints.StateProvince.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.StateProvince.label}" id="c5">
+      <af:outputText value="#{row.StateProvince}" shortDesc="#{bindings.LocationsView11.hints.StateProvince.tooltip}"
+                     id="ot5"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.LocationsView11.hints.CountryId.name}" sortable="false"
+               headerText="#{bindings.LocationsView11.hints.CountryId.label}" id="c6">
+      <af:outputText value="#{row.CountryId}" shortDesc="#{bindings.LocationsView11.hints.CountryId.tooltip}" id="ot6"/>
+    </af:column>
+  </af:table>
+</jsp:root>

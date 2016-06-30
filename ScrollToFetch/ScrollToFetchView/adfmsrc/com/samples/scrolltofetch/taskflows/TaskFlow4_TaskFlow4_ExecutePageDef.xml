@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36"
+                id="TaskFlow4_TaskFlow4_ExecutePageDef" Package="com.samples.scrolltofetch.taskflows"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="LocationsView1" RangeSize="25" DataControl="ScrollToAppModuleDataControl"
+              id="LocationsView1Iterator" Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="LocationsView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+  </bindings>
+</pageDefinition>

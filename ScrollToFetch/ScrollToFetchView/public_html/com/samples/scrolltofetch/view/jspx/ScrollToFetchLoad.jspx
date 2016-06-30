@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="ScrollToFetchLoad.jspx" id="d1">
+           
+            <af:form id="f1">
+             <af:outputText id="ot1" value="r3#{pageFlowScope.scrollToFetchBean.lazyLoadMap['r3'] }"/>
+                <af:outputText id="otw1" value="r4#{pageFlowScope.scrollToFetchBean.lazyLoadMap['r4'] }"/>
+                
+                        <af:panelGroupLayout id="g1" binding="#{scrollToFetchBindingsBean.pglBinding}">
+                            <af:region value="#{bindings.TaskFlow11.regionModel}" id="r1"/>
+                            <af:region value="#{bindings.TaskFlow21.regionModel}" id="r2"/>
+                            <af:region value="#{bindings.TaskFlow31.regionModel}" id="r3"/>
+                    <af:region value="#{bindings.TaskFlow41.regionModel}" id="r4"/>
+                </af:panelGroupLayout>
+                  </af:form>
+             <af:resource type="javascript" source="https://code.jquery.com/jquery-1.12.3.min.js"/>
+            <af:resource type="javascript" source="/com/samples/scrolltofetch/view/js/ScrollToFetch.js"/>
+            <af:clientListener method="attachScrollEvent" type="load"/>
+            <af:serverListener type="scrollToFetchListener" method="#{pageFlowScope.scrollToFetchBean.refreshNextTaskflow}"/>
+        </af:document>
+    </f:view>
+</jsp:root>
